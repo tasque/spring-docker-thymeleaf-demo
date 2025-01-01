@@ -1,0 +1,4 @@
+spring:
+  application.name: demo
+  liquibase:
+    change-log: db/changelog-root.xml

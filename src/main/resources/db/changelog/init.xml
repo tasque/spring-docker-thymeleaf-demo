@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd">
+
+  <changeSet id="init-script" author="p.novolodskiy">
+    <createTable tableName="word">
+      <column type="bigserial" name="id">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column type="text" name="word">
+        <constraints nullable="false" unique="true"/>
+      </column>
+    </createTable>
+    <sqlFile path="insert.sql" relativeToChangelogFile="true"/>
+  </changeSet>
+
+
+</databaseChangeLog>
